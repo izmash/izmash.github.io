@@ -3,7 +3,7 @@
 }
 
 body, html {
-	background-color: rgb(224, 192, 151);
+	background-color: #DACFBD;
 	font-size: 100%;
 	margin: 0px;
     height: 100%;
@@ -31,13 +31,13 @@ h3 {
     margin: 0;
     padding: 5px 20% 5px 20%;
     overflow: hidden;
-    background-color: rgba(45, 36, 36, 0.8);
+    background-color: rgba(0, 0, 0, 0.7);
 }
 
 .navbar > a, i {
     float: left;
 	display: block;
-	color: rgb(224, 192, 151);
+	color: #DACFBD;
 	text-align: center;
 	padding: 12px 14px;
     text-decoration: none;
@@ -51,18 +51,18 @@ h3 {
 
 .navbar > a.s2 {
     float: right;
-    background-color: rgb(184, 92, 56);
+    background-color: #691B28;
     border-radius: 10px;
     padding: 12px;
 }
 
 .navbar > i:hover {
-    background-color: rgb(184, 92, 56);
+    background-color: #691B28;
     border-radius: 10px;
 }
 
 .navbar > a.s1:hover {
-    background-color: rgb(184, 92, 56);
+    background-color: #691B28;
     border-radius: 10px;
 }
 
@@ -107,7 +107,7 @@ h3 {
     position: absolute;
     bottom: 10%;
     left: 20%;
-    color: rgb(224, 192, 151);
+    color: #DACFBD;
 }
 
 .main {
@@ -126,9 +126,8 @@ h3 {
 }
 
 #opis {
-    background-color: rgb(45, 36, 36);
+    background-color: #691B28;
     height: fit-content; 
-    color: rgba(0, 0, 0, 0.9);
     padding: 20px 0 20px 0;
 }
 
@@ -136,7 +135,7 @@ h3 {
 	font-size: 18px;
     text-align: justify;
     margin: 0 20px 0 20px;
-    color: rgb(224, 192, 151);
+    color: #DACFBD;
 }
 
 @media screen and (min-width: 910px) {
@@ -159,7 +158,7 @@ h3 {
     margin: 10px;
     max-width: fit-content;
     position: relative;
-    background-color: rgb(92, 61, 46);
+    background-color: #5D3222;
 }
 
 .ofertaImgTitle {
@@ -167,10 +166,9 @@ h3 {
     left: 10px;
     top: 10px;
     padding: 6px;
-    background-color: rgba(45, 36, 36, 0.8);
-    color: rgb(224, 192, 151);
+    background-color: rgba(39, 21, 17, 0.8);
+    color: #DACFBD;
 }
-
 .expandedImage { 
     max-width: 350px;
 }
@@ -240,7 +238,7 @@ h3 {
     position: absolute;
     top: 200px;
     right: 10%;
-    color: rgb(224, 192, 151);
+    color: #DACFBD;
     float: right;
     font-size: 40px;
     font-weight: bold;
@@ -248,7 +246,7 @@ h3 {
 
 .close:hover,
 .close:focus {
-    color: rgb(184, 92, 56);
+    color: #691B28;
     text-decoration: none;
     cursor: pointer;
 }
@@ -261,7 +259,7 @@ h3 {
     top: 45%;
     font-size: 30px;
     font-weight: bold;
-    color: rgb(224, 192, 151);
+    color: #DACFBD;
     padding: 20px;
     border-radius: 10px;
 }
@@ -276,7 +274,7 @@ h3 {
 
 #caption {
     text-align: center;
-    color: rgb(224, 192, 151);
+    color: #DACFBD;
     margin: auto;
     display: block;
     width: 80%;
@@ -286,26 +284,25 @@ h3 {
 }
 
 .kontakt {
-    background-color: rgb(45, 36, 36)
+    background-color: #271511;
 }
 
 .kontakt > p {
     font-size: 18px;
-    color: rgb(224, 192, 151);
+    color: #DACFBD;
     margin: 0;
 }
 
 .mapContainer {
-    background-color: rgb(45, 36, 36);
+    background-color: #271511;
     width: 100%; 
     height: 600; 
     padding: 0 0 20px 0;
 }
 
 footer {
-    background-color: rgb(92, 61, 46);
+    background-color: #5D3222;
     padding: 10px 0 10px 0;
     text-align: center;
-    color: rgba(0, 0, 0, 0.9);
     font-size: 16px;
 }
