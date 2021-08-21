@@ -1,0 +1,231 @@
+<!DOCTYPE HTML>
+<html lang="pl">
+<html>
+
+<head>
+	<meta charset="utf-8"/>
+	<title>Pod Kasztanem - home</title>
+	<link rel="stylesheet" type="text/css" href="styles/mainstyle.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body> 
+    <div class="navbar"> <!--NavBar-->
+		<a class="s1" href="#Home">Pod kasztanem</a>
+		<a class="s1" href="#Oferta">Oferta</a>
+		<a class="s1" href="#Galeria">Galeria</a>
+		<a class="s1" href="#Kontakt">Kontakt</a>
+		<a class="s2" href="http://www.booking.com/Share-RWKscr">Zarezerwuj</a>
+		<i id="icon" class="material-icons" onclick="responsiveNavbar()">&#xe5d2;</i>
+	</div>
+
+	<div id="Home" class="headerImg"> <!--MainImg-->
+		<div class="textbox">
+			<h1>Pod Kasztanem</h1> 
+			<h2>Gospodarstwo agrotutystyczne</h2>
+			<p>Witamy w naszym Gospodarstwie agroturystycznym</p>
+		</div>
+	</div>
+	
+	<div id="opis">
+		<h3 style="color: rgb(224, 192, 151);">Ważna informacja</h3>
+		<p>Jesteśmy czynnie działającym ekologicznym gospodarstwem rolnym zajmującym się hodowlą bydła
+		mięsnego, a także oferującym miejsca noclegowe, a także inne atrakcje agroturystyczne. 
+		Znajdujemy się w Strachocinie, wsi przyległej do Stronia Śląskiego, jest to bardzo ciche i spokojne miejsce,
+		ale nie jest zbytnio oddalone od głównych atrakcji turystycznych w okolicy. </p>
+		<br>
+		<p>Oferujemy łącznie 15 miejsc noclegowych w pokojach dwu, trój, lub 4 osobowych, 
+		niektóre posiadają łazienkę w pokoju, a dla innych łazienka znajduję się osobno na korytarzu.
+		Oprócz pokojów noclegowych dostępna jest kuchnia z pełnym wyposażeniem, gdzie bez problemu można 
+		przyżądzać jedzenie, na ogrodzie znajduje się wiata z grillem, 
+		a niedaleko także klimatyczne miejsce na ognisko, dodatkowo zapewniamy także darmowy internet po wi-fi. </p>
+		<br>
+		<p>Ze względu na to, że po podwórzu chodzą wolno kury, koty i gęsi, a także z tego powodu, że sami posiadamy
+		dość nieprzyjacielskie psy nie przyjmujemy gości z psami. </p>	
+	</div>
+
+	<div id="Oferta" class="main"> </div>
+		
+	<h3 style="color: rgb(45, 36, 36);">Oferta</h3>
+	
+	<div class="ofertaContainer">
+		<div class="ofertaBox" >
+			<div class="ofertaImgTitle">Pokój czerwony</div>
+			<img class="expandedImage" src="images/P10201351.jpg">
+			<div class="ofertaMiniImgs">
+				<img class="ofertaImgs" src="images/P10201351.jpg" onclick="openImg(this)">
+				<img class="ofertaImgs" src="images/P10201371.jpg" onclick="openImg(this)">
+				<img class="ofertaImgs" src="images/P10201471.jpg" onclick="openImg(this)">
+			</div>
+			<ul>
+				<li>Łóżko pojedyńcze i podwójne</li><br>
+				<li>Telewizor</li>
+			</ul>
+		</div>
+		<div class="ofertaBox">
+			<div class="ofertaImgTitle">Pokój czerwony</div>
+			<img class="expandedImage" src="images/P10201351.jpg">
+			<div class="ofertaMiniImgs">
+				<img class="ofertaImgs" src="images/dom.jpg" onclick="openImg(this)">
+				<img class="ofertaImgs" src="images/P10303861.jpg" onclick="openImg(this)">
+				<img class="ofertaImgs" src="images/P1030394.jpg" onclick="openImg(this)">
+			</div>
+			<ul>
+				<li>Łóżko pojedyńcze i podwójne</li><br>
+				<li>Telewizor</li>
+			</ul>
+		</div>
+		<div class="ofertaBox">
+			<div class="ofertaImgTitle">Pokój czerwony</div>
+			<img class="expandedImage" src="images/P10201351.jpg">
+			<div class="ofertaMiniImgs">
+				<img class="ofertaImgs" src="images/dom.jpg" onclick="openImg(this)">
+				<img class="ofertaImgs" src="images/P10303861.jpg" onclick="openImg(this)">
+				<img class="ofertaImgs" src="images/P1030394.jpg" onclick="openImg(this)">
+			</div>
+			<ul>
+				<li>Łóżko pojedyńcze i podwójne</li><br>
+				<li>Telewizor</li>
+			</ul>
+		</div>
+		
+	</div>
+
+	<div id="Galeria" class="main"></div> 
+		
+	<h3 style="color: rgb(45, 36, 36);">Galeria</h3>
+	
+	<div class="galeria"> <!--Galeria-->
+		<img class="galleryImg" src="images/P10201351.jpg" onclick="openModal();currentSlide(this);isLast()" alt="Pokój czerwony">
+		<img class="galleryImg" src="images/P10201371.jpg" onclick="openModal();currentSlide(this);isLast()" alt="Pokój zielony">
+		<img class="galleryImg" src="images/P10201471.jpg" onclick="openModal();currentSlide(this);isLast()" alt="Pokój niebieski">
+		<img class="galleryImg" src="images/P10303861.jpg" onclick="openModal();currentSlide(this);isLast()" alt="Dom">
+		<img class="galleryImg" src="images/P1030394.jpg" onclick="openModal();currentSlide(this);isLast()" alt="Ogród">
+	</div>
+
+	<div id="modal">
+		<span class="close" onclick="closeModal()">&times;</span>
+		<img id="modalImg" class="animate">
+		<a id="prev" onclick="plusSlides(-1);resetTransition();isLast()">&#10094;</a>
+    	<a id="next" onclick="plusSlides(1);resetTransition();isLast()">&#10095;</a>
+		<div id="caption"></div>
+	</div>
+	
+	<div style="background-color: rgb(45, 36, 36); padding: 18px;"> 
+		<h3 style="color: rgb(224, 192, 151);"> Kontakt i Dojazd</h3>
+		<div id="Kontakt" class="main"><!--Kontakt-->
+			<div class="kontakt">
+				<p>	Telefon: 888 607 808, 748 141 283</p><br>
+				<p> Email: podkasztanem@gmail.com</p><br>
+				<p>Adres: Strachocin 23, Stronie Śląskie, 57-550</p><br>
+				<p>Numer konta: </p><br>
+				<br><br>
+				<p>	W celu dotarcia do nas najlepiej dojechać do samego Stronia Śląskiego i tam skręcić w ulicę górną,
+				która zaprowadzi niemal do samego gospodarstwa.
+				</p>		
+			</div>
+		</div>
+	</div>
+
+	<div class="mapContainer">
+		<div> <!-- mapa -->
+			<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d20390.520484150416!2d16.8485745!3d50.295379999999994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xe1c6b215a510133b!2sGospodarstwo%20agroturystyczne%20Pod%20Kasztanem!5e0!3m2!1spl!2spl!4v1599503892389!5m2!1spl!2spl" 
+			width="100%" height="600" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+			</iframe>
+		</div>
+	</div>
+
+	<footer>
+		Copyright © 2021. Szymon Sadowski. All rights reserved.
+	</footer>
+</body>
+
+<script> //images gallery script
+var sources = []; //creating empty array/object for image sources
+
+sources = document.getElementsByClassName("galleryImg"); //get all images elements
+
+var modal = document.getElementById("modal"); //get the modal
+
+var modalImg = document.getElementById("modalImg"); //reference to modal image
+
+var captionText = document.getElementById("caption"); //reference box with caption
+
+var current = 0; //current index of object/array?
+
+function openModal(){ //opening modal by clicking on img
+	modal.style.display = "block";
+}
+
+function closeModal(){ //closing modal
+	modal.style.display = "none";
+}
+
+window.onclick = function(event){ //closing modal when clicking anywhere
+	if(event.target == modal)
+	{
+		modal.style.display = "none";
+	}
+}
+
+function currentSlide(t){ //function to replace image source
+	modalImg.src = t.src; //put clicked image source to modal image container
+	captionText.innerHTML = t.alt; //put clicked image alt to modal image container
+
+	for (let i=0; i<sources.length; i++) //go throught full array and find index of current image source
+	{
+		if(modalImg.src == sources[i].src) {current = i;} 
+	}
+	console.log(current);
+}
+
+function resetTransition(){ //function to reset animation
+	modalImg.classList.remove("animate");
+	modalImg.offsetWidth; //reset reflow?!
+	setTimeout(function() {modalImg.classList.add("animate")}, 1);
+}
+
+function plusSlides(n){ //function to change source of modal img to source of +1/-1 image in array
+	let x = current + n;
+	modalImg.src = sources[x].src;
+	captionText.innerHTML = sources[x].alt;
+	current = x;	
+	console.log(current);
+}
+
+function isLast(){
+	var prevButton = document.getElementById("prev");
+	var nextButton = document.getElementById("next");
+	if(current == 0){
+		prevButton.style.display = "none";
+	}
+	else if(current == sources.length - 1){
+		nextButton.style.display = "none";
+	}
+	else{
+		nextButton.style.display = "block";
+		nextButton.style.display = "block";
+	}
+};
+
+</script>
+
+<script> //oferta images script
+function openImg(t) { //function to change image after you click on them
+	var x = t.parentElement; //get the first parent div of clicked img
+	var y = x.parentElement; //get the second parent div where img is
+	y.querySelector("img").src = t.src; //replace src of img container with src of clicked img
+}
+</script>
+
+<script> //responsive navbar
+	function responsiveNavbar() {
+		var x = document.getElementsByClassName("navbar");
+		if (x.className === "navbar") {
+			x.className += "responsive";
+		} else {
+			x.className = "navbar";
+		}
+	}
+</script>
