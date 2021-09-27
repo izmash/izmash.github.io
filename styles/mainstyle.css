@@ -25,7 +25,6 @@ h3 {
 }
 
 p {
-    margin: 0;
     font-size: 16px;
 }
 
@@ -39,7 +38,7 @@ p {
     background-color: rgba(0, 0, 0, 0.7);
 }
 
-.navbar > a, i {
+.navbar a, i {
     float: left;
 	display: block;
 	color: #DACFBD;
@@ -54,7 +53,7 @@ p {
 
 .navbar > i { display: none;}
 
-.navbar > a.s2 {
+.navbar a.s2 {
     float: right;
     background-color: #691B28;
     border-radius: 10px;
@@ -66,36 +65,25 @@ p {
     border-radius: 10px;
 }
 
-.navbar > a.s1:hover {
+.navbar a.s1:hover {
     background-color: #691B28;
     border-radius: 10px;
 }
 
-.navbar > a.s2:hover {
+.navbar a.s2:hover {
     border-radius: 10px;
     background-color: royalblue;
 }
 
 @media screen and (max-width: 910px) {
     .navbar { padding: 5px 20px 5px 20px; }
-    .navbar > a:not(:first-child) {display: none;}
+    .navbar a { display: block; }
     .navbar > i {
-        display: block;
+        display: inline;
         float: right;
     }
-}
-
-@media screen and (max-width: 910px) {
-    .navbar.responsive {position: relative;}
-    .navbar.responsive > i {
-        position: absolute;
-        right: 0;
-        top: 0;
-    }
-    .navbar.responsive > a {
-        float: none;
-        display: block;
-        text-align: left;
+    .navbar a:not(:first-child) {
+        width: 100%;
     }
 }
 
@@ -130,24 +118,27 @@ p {
     h3 { margin-left: 20px; }
 }
 
-#opis {
-    background-color: #691B28;
+.textContainer {
     height: fit-content; 
-    padding: 20px 0 20px 0;
+    padding: 0 0 10px 0;
 }
 
-#opis > p {
-    text-align: justify;
-    margin: 0 20px 0 20px;
-    color: #DACFBD;
+@media screen and (max-width: 910px) {
+    .textContainer > p {
+        margin: 0 20px 0 20px;
+    }
 }
 
 @media screen and (min-width: 910px) {
-    #opis > p {
+    .textContainer > p {
         margin: auto;
         max-width: 1440px;
         width: 60%;
     }
+}
+
+.textContainer > p {  
+    color: #DACFBD;
 }
 
 .ofertaContainer {
@@ -165,12 +156,22 @@ p {
     background-color: #5D3222;
 }
 
+.ofertaBox > ul {
+    margin: 10px 0 10px 0;
+}
+
+.ofertaBox > ul > li {
+    color: #DACFBD;
+    margin: 5px 0 5px 0;
+    font-size: 16px;
+}
+
 .ofertaImgTitle {
     position: absolute;
     left: 10px;
     top: 10px;
     padding: 6px;
-    background-color: rgba(39, 21, 17, 0.8);
+    background-color: rgba(39, 21, 17, 0.9);
     color: #DACFBD;
 }
 .expandedImage { 
@@ -195,21 +196,16 @@ p {
     justify-content: space-around;
 }
 
-.galeria > img {
-    max-width: 300px;
-    padding: 10px;
+@media screen and (max-width: 910px) {
+    .galeria > img { 
+        max-width: 200px;
+    }
 }
 
-#modal {
-    display: none;
-    position: fixed;
-    z-index: 1;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    padding-top: 200px;
-    background-color: rgba(0, 0, 0, 0.95);
+.galeria > img {
+    height: auto;
+    max-width: 300px;
+    object-fit: contain;
 }
 
 .galleryImg {
@@ -219,40 +215,56 @@ p {
 
 .galleryImg:hover {opacity: 0.8;}
 
-#modalImg {
-    background-color: black;
-    margin: auto;
-    display: block;
+#modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
     width: 100%;
-    max-width: 700px;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.95);
+}
+
+.modalBox {
+    position: relative;
+    max-width: 60%;
+    margin: auto;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+#modalImg {
+    width: 100%;
 }
 
 .animate {
     animation-name: pass;
-    animation-timing-function: ease-in;
-    animation-duration: 0.2s;
+    animation-timing-function: ease-out;
+    animation-duration: 0.4s;
 }
 
 @keyframes pass {
-    from {opacity: .85;}
+    from {opacity: .0;}
     to {opacity: 1;}
 }
 
 .close {
     position: absolute;
-    top: 200px;
-    right: 10%;
+    top: 0;
+    right: -53px;
     color: #DACFBD;
     float: right;
     font-size: 40px;
     font-weight: bold;
+    padding: 0 10px 0 10px;
+    border-radius: 10px;
 }
 
 .close:hover,
 .close:focus {
-    color: #691B28;
-    text-decoration: none;
     cursor: pointer;
+    background-color: rgba(255, 255, 240, 0.5);
 }
 
 #prev, 
@@ -260,7 +272,8 @@ p {
     cursor: pointer;
     position: absolute;
     margin: auto;
-    top: 45%;
+    top: 50%;
+    transform: translateY(-50%);
     font-size: 30px;
     font-weight: bold;
     color: #DACFBD;
@@ -268,8 +281,8 @@ p {
     border-radius: 10px;
 }
 
-#prev {left: 10%;}
-#next {right: 10%;}
+#prev {left: -66px;}
+#next {right: -66px;}
 
 #prev:hover,
 #next:hover {
@@ -284,28 +297,17 @@ p {
     width: 80%;
     max-width: 800px;
     font-size: 20px;
-    padding: 15px;
-}
-
-@media screen and (max-width: 910px) {
-    #Kontakt > p { margin-left: 20px; }
+    padding: 10px;
 }
 
 #Kontakt {
     background-color: #271511;
 }
 
-#Kontakt > p {
-    color: #DACFBD;
-    margin: auto;
-    max-width: 1440px;
-    width: 60%;
-}
-
 .mapContainer {
     background-color: #271511;
     width: 100%; 
-    height: 613px; 
+    height: 610px; 
     padding: 0 0 13px 0;
 }
 
@@ -314,4 +316,5 @@ footer {
     padding: 10px 0 10px 0;
     text-align: center;
     font-size: 16px;
+    color: #DACFBD;
 }

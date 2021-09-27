@@ -13,11 +13,13 @@
 <body> 
     <div class="navbar"> <!--NavBar-->
 		<a class="s1" href="#Home">Pod kasztanem</a>
-		<a class="s1" href="#Oferta">Oferta</a>
-		<a class="s1" href="#Galeria">Galeria</a>
-		<a class="s1" href="#Kontakt">Kontakt</a>
-		<a class="s2" href="http://www.booking.com/Share-RWKscr">Zarezerwuj</a>
-		<i id="icon" class="material-icons" onclick="responsiveNavbar()">&#xe5d2;</i>
+		<div id="links">
+			<a class="s1" href="#Oferta">Oferta</a>
+			<a class="s1" href="#Galeria">Galeria</a>
+			<a class="s1" href="#Kontakt">Kontakt</a>
+			<a class="s2" href="http://www.booking.com/Share-RWKscr">Zarezerwuj</a>
+		</div>
+		<i id="icon" class="material-icons" onclick="dropMenu()">&#xe5d2;</i>
 	</div>
 
 	<div id="Home" class="headerImg"> <!--MainImg-->
@@ -28,7 +30,7 @@
 		</div>
 	</div>
 	
-	<div id="opis">
+	<div id="opis" class="textContainer" style="background-color: #691B28;">
 		<h3 style="color: #DACFBD;">Ważna informacja</h3>
 		<p>Jesteśmy czynnie działającym ekologicznym gospodarstwem rolnym zajmującym się hodowlą bydła
 		mięsnego, a także oferującym miejsca noclegowe, a także inne atrakcje agroturystyczne. 
@@ -51,20 +53,63 @@
 	
 	<div class="ofertaContainer">
 		<div class="ofertaBox" >
+			<div class="ofertaImgTitle">Pokój żółty</div>
+			<img class="expandedImage" src="images/P1030889.jpg">
+			<div class="ofertaMiniImgs">
+				<img class="ofertaImgs" src="images/P1030889.jpg" onclick="openImg(this)">
+				<img class="ofertaImgs" src="images/P1030892.jpg" onclick="openImg(this)">
+				<img class="ofertaImgs" src="images/P1030893.jpg" onclick="openImg(this)">
+			</div>
+			<ul>
+				<li>Dwa łóżka pojedyńcze i jedno podwójne</li>
+				<li>Telewizor</li>
+				<li>Łazienka</li>
+				<li>Mini kuchnia</li>
+			</ul>
+		</div>
+		<div class="ofertaBox">
 			<div class="ofertaImgTitle">Pokój czerwony</div>
 			<img class="expandedImage" src="images/P10201351.jpg">
 			<div class="ofertaMiniImgs">
-				<img class="ofertaImgs" src="images/P10201351.jpg" onclick="openImg(this)">
+				<img class="ofertaImgs" src="images/dom.jpg" onclick="openImg(this)">
+				<img class="ofertaImgs" src="images/P10303861.jpg" onclick="openImg(this)">
+				<img class="ofertaImgs" src="images/P1030394.jpg" onclick="openImg(this)">
+			</div>
+			<ul>
+				<li>Łóżko pojedyńcze i podwójne</li>
+				<li>Telewizor</li>
+				<li>Łazienka</li>
+			</ul>
+		</div>
+		<div class="ofertaBox">
+			<div class="ofertaImgTitle">Pokój zielony</div>
+			<img class="expandedImage" src="images/P10201371.jpg">
+			<div class="ofertaMiniImgs">
 				<img class="ofertaImgs" src="images/P10201371.jpg" onclick="openImg(this)">
+				<img class="ofertaImgs" src="images/P10201381.jpg" onclick="openImg(this)">
+				<img class="ofertaImgs" src="images/P1030394.jpg" onclick="openImg(this)">
+			</div>
+			<ul>
+				<li>Dwa łóżka pojedyńcze i jedno podwójne</li>
+				<li>Telewizor</li>
+
+			</ul>
+		</div>
+		<div class="ofertaBox">
+			<div class="ofertaImgTitle">Pokój niebieski</div>
+			<img class="expandedImage" src="images/P10201461.jpg">
+			<div class="ofertaMiniImgs">
+				<img class="ofertaImgs" src="images/P10201461.jpg" onclick="openImg(this)">
 				<img class="ofertaImgs" src="images/P10201471.jpg" onclick="openImg(this)">
+				<img class="ofertaImgs" src="images/P1030394.jpg" onclick="openImg(this)">
 			</div>
 			<ul>
-				<li>Łóżko pojedyńcze i podwójne</li><br>
+				<li>Dwa łóżka pojedyńcze i jedno podwójne</li>
 				<li>Telewizor</li>
 			</ul>
 		</div>
 		<div class="ofertaBox">
-			<div class="ofertaImgTitle">Pokój czerwony</div>
+			<div class="ofertaImgTitle">Pokój pomarańczowy</div>
 			<img class="expandedImage" src="images/P10201351.jpg">
 			<div class="ofertaMiniImgs">
 				<img class="ofertaImgs" src="images/dom.jpg" onclick="openImg(this)">
@@ -72,20 +117,7 @@
 				<img class="ofertaImgs" src="images/P1030394.jpg" onclick="openImg(this)">
 			</div>
 			<ul>
-				<li>Łóżko pojedyńcze i podwójne</li><br>
-				<li>Telewizor</li>
-			</ul>
-		</div>
-		<div class="ofertaBox">
-			<div class="ofertaImgTitle">Pokój czerwony</div>
-			<img class="expandedImage" src="images/P10201351.jpg">
-			<div class="ofertaMiniImgs">
-				<img class="ofertaImgs" src="images/dom.jpg" onclick="openImg(this)">
-				<img class="ofertaImgs" src="images/P10303861.jpg" onclick="openImg(this)">
-				<img class="ofertaImgs" src="images/P1030394.jpg" onclick="openImg(this)">
-			</div>
-			<ul>
-				<li>Łóżko pojedyńcze i podwójne</li><br>
+				<li>Łóżko pojedyńcze i podwójne</li>
 				<li>Telewizor</li>
 			</ul>
 		</div>
@@ -97,39 +129,40 @@
 	<h3 style="color: #271511;">Galeria</h3>
 	
 	<div class="galeria"> <!--Galeria-->
-		<img class="galleryImg" src="images/P10201351.jpg" onclick="openModal();currentSlide(this);isLast()" alt="Pokój czerwony">
-		<img class="galleryImg" src="images/P10201371.jpg" onclick="openModal();currentSlide(this);isLast()" alt="Pokój zielony">
-		<img class="galleryImg" src="images/P10201471.jpg" onclick="openModal();currentSlide(this);isLast()" alt="Pokój niebieski">
-		<img class="galleryImg" src="images/P10303861.jpg" onclick="openModal();currentSlide(this);isLast()" alt="Dom">
-		<img class="galleryImg" src="images/P1030394.jpg" onclick="openModal();currentSlide(this);isLast()" alt="Ogród">
+		<img class="galleryImg" src="images/P10209271.jpg" onclick="openModal();currentSlide(this);isLast()" alt="Pokój czerwony">
+		<img class="galleryImg" src="images/P10303921.jpg" onclick="openModal();currentSlide(this);isLast()" alt="Pokój zielony">
+		<img class="galleryImg" src="images/P1030394.jpg" onclick="openModal();currentSlide(this);isLast()" alt="Pokój niebieski">
+		<img class="galleryImg" src="images/133742656.jpg" onclick="openModal();currentSlide(this);isLast()" alt="Dom">
+		<img class="galleryImg" src="images/132373252.jpg" onclick="openModal();currentSlide(this);isLast()" alt="Ogród">
+		<img class="galleryImg" src="images/P1030864.jpg" onclick="openModal();currentSlide(this);isLast()" alt="Ogród">
+		<img class="galleryImg" src="images/P1030875.jpg" onclick="openModal();currentSlide(this);isLast()" alt="Ogród">
 	</div>
 
 	<div id="modal">
-		<span class="close" onclick="closeModal()">&times;</span>
-		<img id="modalImg" class="animate">
-		<a id="prev" onclick="plusSlides(-1);resetTransition();isLast()">&#10094;</a>
-    	<a id="next" onclick="plusSlides(1);resetTransition();isLast()">&#10095;</a>
-		<div id="caption"></div>
+		<div class="modalBox">
+			<span class="close" onclick="closeModal()">&times;</span>
+			<img id="modalImg" class="animate">
+			<a id="prev" onclick="plusSlides(-1);resetTransition();isLast()">&#10094;</a>
+    		<a id="next" onclick="plusSlides(1);resetTransition();isLast()">&#10095;</a>
+			<div id="caption"></div>
+		</div>
 	</div>
 	
-	<div style="background-color: #271511;padding-bottom: 10px;"> 
+	<div id="Kontakt" class="textContainer" style="margin-bottom: 0;">
 		<h3 style="color: #DACFBD;"> Kontakt i Dojazd</h3>
-		<div id="Kontakt"><!--Kontakt-->
-			<p>	Telefon: 888 607 808, 748 141 283</p><br>
-			<p> Email: podkasztanem@gmail.com</p><br>
-			<p>Adres: Strachocin 23, Stronie Śląskie, 57-550</p><br>
-			<p>Numer konta: </p><br>
-			<br><br>
-			<p>	W celu dotarcia do nas najlepiej dojechać do samego Stronia Śląskiego i tam skręcić w ulicę górną,
-			która zaprowadzi niemal do samego gospodarstwa.
-			</p>		
-		</div>
+		<p>	Telefon: 888 607 808, 748 141 283</p><br>
+		<p> Email: podkasztanem@gmail.com</p><br>
+		<p>Adres: Strachocin 23, Stronie Śląskie, 57-550</p><br>
+		<p>Numer konta: </p><br>
+		<br><br>
+		<p>	W celu dotarcia do nas najlepiej dojechać do samego Stronia Śląskiego i tam skręcić w ulicę górną,
+		która zaprowadzi niemal do samego gospodarstwa.</p>		
 	</div>
 
 	<div class="mapContainer"> <!-- mapa -->
-			<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d20390.520484150416!2d16.8485745!3d50.295379999999994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xe1c6b215a510133b!2sGospodarstwo%20agroturystyczne%20Pod%20Kasztanem!5e0!3m2!1spl!2spl!4v1599503892389!5m2!1spl!2spl" 
-			width="100%" height="600px" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
-			</iframe>
+		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d20390.520484150416!2d16.8485745!3d50.295379999999994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xe1c6b215a510133b!2sGospodarstwo%20agroturystyczne%20Pod%20Kasztanem!5e0!3m2!1spl!2spl!4v1599503892389!5m2!1spl!2spl" 
+		width="100%" height="600px" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+		</iframe>
 	</div>
 
 	<footer>
@@ -138,9 +171,7 @@
 </body>
 
 <script> //images gallery script
-var sources = []; //creating empty array/object for image sources
-
-sources = document.getElementsByClassName("galleryImg"); //get all images elements
+var sources = document.getElementsByClassName("galleryImg"); //get all images elements
 
 var modal = document.getElementById("modal"); //get the modal
 
@@ -190,21 +221,24 @@ function plusSlides(n){ //function to change source of modal img to source of +1
 	console.log(current);
 }
 
+var prevButton = document.getElementById("prev"); //prev and next buttons
+var nextButton = document.getElementById("next");
+
 function isLast(){
-	var prevButton = document.getElementById("prev");
-	var nextButton = document.getElementById("next");
 	if(current == 0){
 		prevButton.style.display = "none";
+		nextButton.style.display = "block";
 	}
 	else if(current == sources.length - 1){
+		prevButton.style.display = "block";
 		nextButton.style.display = "none";
 	}
 	else{
-		nextButton.style.display = "block";
+		prevButton.style.display = "block";
 		nextButton.style.display = "block";
 	}
 };
-
+console.log(current);
 </script>
 
 <script> //oferta images script
@@ -216,12 +250,14 @@ function openImg(t) { //function to change image after you click on them
 </script>
 
 <script> //responsive navbar
-	function responsiveNavbar() {
-		var x = document.getElementsByClassName("navbar");
-		if (x.className === "navbar") {
-			x.className += "responsive";
-		} else {
-			x.className = "navbar";
+	function dropMenu() {
+		var x = document.getElementById("links");
+		if(x.style.display == "none") {
+			x.style.display = "block"
 		}
+		else {
+			x.style.display = "none"
+		}
+		console.log(x);
 	}
 </script>
