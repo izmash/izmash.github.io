@@ -3,11 +3,11 @@
 }
 
 body, html {
-	background-color: #DACFBD;
+	background-color: #D9D6D0;
 	font-size: 100%;
 	margin: 0px;
     height: 100%;
-    font-family: Garamond, serif;
+    font-family: 'Dosis', sans-serif;
 }
 
 section::after {
@@ -17,79 +17,73 @@ section::after {
 }
 
 h3 {
-    font-size: 22px;
-    padding: 10px 0 10px 0;
+    font-size: 24px;
+    padding: 20px 0 20px 0;
     margin: auto;
     max-width: 1440px;
     width: 60%;
+    text-align: center;
 }
 
 p {
-    font-size: 16px;
+    font-size: 20px;
 }
 
 .navbar {
+    display: block;
     position: fixed;
     z-index: 1;
     width: 100%;
     margin: 0;
-    padding: 5px 20% 5px 20%;
-    overflow: hidden;
-    background-color: rgba(0, 0, 0, 0.7);
+    padding: 20px 20% 20px 20%;
+    /*background-color: rgba(0, 0, 0, 0.7); */
 }
 
-.navbar a, i {
-    float: left;
-	display: block;
-	color: #DACFBD;
+.navbar a {
+    display: inline-block;
+	color: #D9D6D0;
 	text-align: center;
-	padding: 12px 14px;
     text-decoration: none;
-	font-size: 20px; 
-    transition-timing-function: ease;
-    transition-duration: 0.4s;
+	font-size: 22px; 
     cursor: pointer;
 }
 
-.navbar > i { display: none;}
+.navbar a.le { margin: 0 30px 0 0; }
 
-.navbar a.s2 {
+.navbar a.le:after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: white;
+    transition: width 0.3s;
+}
+
+.navbar a.le:hover::after {
+    width: 100%;
+}
+
+.navbar a.re {
     float: right;
-    background-color: #691B28;
-    border-radius: 10px;
-    padding: 12px;
+    padding: 0 20px 0 20px;
+    background: #00358080;   
+    outline: 1px solid;
+    outline-color: white;
+    outline-offset: 0px;
+    transition: all 0.6s cubic-bezier(0.19, 1, 0.22, 1);
 }
 
-.navbar > i:hover {
-    background-color: #691B28;
-    border-radius: 10px;
+.navbar a.re:hover {
+    background: #006ab7;
+    border: 1 solid;
+    outline-color: rgba(255, 255, 255, 0);
+    outline-offset: 15px;
 }
 
-.navbar a.s1:hover {
-    background-color: #691B28;
-    border-radius: 10px;
-}
-
-.navbar a.s2:hover {
-    border-radius: 10px;
-    background-color: royalblue;
-}
-
-@media screen and (max-width: 910px) {
-    .navbar { padding: 5px 20px 5px 20px; }
-    .navbar a { display: block; }
-    .navbar > i {
-        display: inline;
-        float: right;
-    }
-    .navbar a:not(:first-child) {
-        width: 100%;
-    }
-}
 
 .headerImg {
     background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),url("../images/P10303861.jpg");
-    height: 50%;
+    height: 80%;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -100,7 +94,7 @@ p {
     position: absolute;
     bottom: 10%;
     left: 20%;
-    color: #DACFBD;
+    color: #D9D6D0;
 }
 
 .main {
@@ -115,12 +109,19 @@ p {
         margin: 0 10px 0 10px;
     }
     .textbox { left: 20px; }
-    h3 { margin-left: 20px; }
 }
 
 .textContainer {
     height: fit-content; 
-    padding: 0 0 10px 0;
+    padding: 10px 0 10px 0;
+}
+
+.textContainer p, h3 { 
+ color: #260801;
+}
+
+#Kontakt  p, h3 { 
+    color: #D9D6D0;
 }
 
 @media screen and (max-width: 910px) {
@@ -137,33 +138,22 @@ p {
     }
 }
 
-.textContainer > p {  
-    color: #DACFBD;
-}
-
 .ofertaContainer {
     display: flex;
     height: fit-content;
     flex-wrap: wrap;
     justify-content: space-around;
-    padding:0 20px 0 20px;
+    padding:50px 20px 40px 20px;
 }
 
 .ofertaBox {  
     margin: 10px;
+    padding: 10px;
     max-width: fit-content;
     position: relative;
-    background-color: #5D3222;
-}
-
-.ofertaBox > ul {
-    margin: 10px 0 10px 0;
-}
-
-.ofertaBox > ul > li {
-    color: #DACFBD;
-    margin: 5px 0 5px 0;
-    font-size: 16px;
+    background-color: #D9D6D0;
+    border: 2px solid black;
+    border-radius: 4px;
 }
 
 .ofertaImgTitle {
@@ -171,8 +161,8 @@ p {
     left: 10px;
     top: 10px;
     padding: 6px;
-    background-color: rgba(39, 21, 17, 0.9);
-    color: #DACFBD;
+    background-color: #260801;
+    color: #D9D6D0;
 }
 .expandedImage { 
     max-width: 350px;
@@ -253,7 +243,7 @@ p {
     position: absolute;
     top: 0;
     right: -53px;
-    color: #DACFBD;
+    color: #D9D6D0;
     float: right;
     font-size: 40px;
     font-weight: bold;
@@ -276,7 +266,7 @@ p {
     transform: translateY(-50%);
     font-size: 30px;
     font-weight: bold;
-    color: #DACFBD;
+    color: #D9D6D0;
     padding: 20px;
     border-radius: 10px;
 }
@@ -291,7 +281,7 @@ p {
 
 #caption {
     text-align: center;
-    color: #DACFBD;
+    color: #D9D6D0;
     margin: auto;
     display: block;
     width: 80%;
@@ -301,20 +291,20 @@ p {
 }
 
 #Kontakt {
-    background-color: #271511;
+    background-color: #260801;
 }
 
 .mapContainer {
-    background-color: #271511;
+    background-color: #260801;
     width: 100%; 
     height: 610px; 
     padding: 0 0 13px 0;
 }
 
 footer {
-    background-color: #5D3222;
+    background-color: #734E38;
     padding: 10px 0 10px 0;
     text-align: center;
     font-size: 16px;
-    color: #DACFBD;
+    color: #D9D6D0;
 }
