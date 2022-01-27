@@ -25,7 +25,7 @@
 
 	<div id="Home" class="headerImg"> <!--MainImg-->
 		<div class="textbox">
-			<h1>Pod Kasztanem <br> Gospodarstwo agrotutystyczne</h1> 
+			<h1>Gospodarstwo agrotutystyczne Pod Kasztanem</h1> 
 			<p>Niezapomniany urlop w przyjemnej wiejskiej atmosferze</p>
 		</div>
 	</div>
@@ -224,15 +224,17 @@ function openImg(t) { //function to change image after you click on them
 }
 </script>
 
-<script> //responsive navbar
-	function dropMenu() {
-		var x = document.getElementById("links");
-		if(x.style.display == "none") {
-			x.style.display = "block"
-		}
-		else {
-			x.style.display = "none"
-		}
-		console.log(x);
+<script> //navbar background fade
+var navbarRef = document.querySelector(".navbar");
+var PageYvalue = window.pageYOffset;
+window.onscroll = function() {
+	var currentPageYvalue = window.pageYOffset;
+	if (currentPageYvalue > 0) {
+		navbarRef.style.backgroundColor = "#00000099";
+		navbarRef.style.padding = "10px 20% 10px 20%";
+	} else {
+		navbarRef.style.backgroundColor = "";
+		navbarRef.style.padding = "";
 	}
+}
 </script>

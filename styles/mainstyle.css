@@ -36,7 +36,7 @@ p {
     width: 100%;
     margin: 0;
     padding: 20px 20% 20px 20%;
-    /*background-color: rgba(0, 0, 0, 0.7); */
+    transition: 0.2s linear;
 }
 
 .navbar a {
@@ -56,7 +56,7 @@ p {
     width: 0;
     height: 2px;
     background: white;
-    transition: width 0.3s;
+    transition: width 0.2s;
 }
 
 .navbar a.le:hover::after {
@@ -82,7 +82,7 @@ p {
 
 
 .headerImg {
-    background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),url("../images/P10303861.jpg");
+    background-image: url("../images/P10303861.jpg");
     height: 80%;
     background-position: center;
     background-repeat: no-repeat;
@@ -92,9 +92,11 @@ p {
 
 .textbox {
     position: absolute;
-    bottom: 10%;
-    left: 20%;
-    color: #D9D6D0;
+    bottom: 30%;
+    left: 50%;
+    transform: translate(-50%);
+    color: indigo;
+    text-align: center;
 }
 
 .main {
