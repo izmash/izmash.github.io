@@ -17,12 +17,7 @@ section::after {
 }
 
 h3 {
-    font-size: 24px;
-    padding: 20px 0 20px 0;
-    margin: auto;
-    max-width: 1440px;
-    width: 60%;
-    text-align: center;
+    margin: 0;
 }
 
 p {
@@ -80,7 +75,6 @@ p {
     outline-offset: 15px;
 }
 
-
 .headerImg {
     background-image: url("../images/P10303861.jpg");
     height: 80%;
@@ -105,57 +99,51 @@ p {
     width: 60%;
 }
 
+@media screen and (max-width: 1200px) {
+    .main {
+        width: 80%;
+    }
+}
+
 @media screen and (max-width: 910px) {
     .main {
         width: 100%;
-        margin: 0 10px 0 10px;
+        padding: 0 10px 0 10px;
     }
-    .textbox { left: 20px; }
 }
 
-.textContainer {
-    height: fit-content; 
-    padding: 10px 0 10px 0;
+.bookmark {
+    height: 41px;
+    width: 20px;
+    background-color: #555;
 }
 
-.textContainer p, h3 { 
- color: #260801;
+.twocolrow {
+    display: flex;
 }
 
-#Kontakt  p, h3 { 
-    color: #D9D6D0;
+.twocolcol {
+    flex: 50%;
 }
 
 @media screen and (max-width: 910px) {
-    .textContainer > p {
-        margin: 0 20px 0 20px;
-    }
-}
-
-@media screen and (min-width: 910px) {
-    .textContainer > p {
-        margin: auto;
-        max-width: 1440px;
-        width: 60%;
+    .twocolcol {
+        width: 100%;
     }
 }
 
 .ofertaContainer {
     display: flex;
-    height: fit-content;
     flex-wrap: wrap;
     justify-content: space-around;
-    padding:50px 20px 40px 20px;
+
 }
 
 .ofertaBox {  
-    margin: 10px;
     padding: 10px;
     max-width: fit-content;
     position: relative;
     background-color: #D9D6D0;
-    border: 2px solid black;
-    border-radius: 4px;
 }
 
 .ofertaImgTitle {
@@ -166,6 +154,7 @@ p {
     background-color: #260801;
     color: #D9D6D0;
 }
+
 .expandedImage { 
     max-width: 350px;
 }
@@ -183,21 +172,21 @@ p {
 
 .galeria {
     display: flex;
-    max-height: fit-content;
     flex-wrap: wrap;
     justify-content: space-around;
 }
 
-@media screen and (max-width: 910px) {
-    .galeria > img { 
-        max-width: 200px;
-    }
+.galleryImgContainer {
+    height: 300px;
+    width: 300px;
+    margin: 5px;
+    border-radius: 25px;
 }
 
-.galeria > img {
-    height: auto;
-    max-width: 300px;
-    object-fit: contain;
+.galleryImgContainer img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .galleryImg {
@@ -206,6 +195,13 @@ p {
 }
 
 .galleryImg:hover {opacity: 0.8;}
+
+@media screen and (max-width: 910px) {
+    .galleryImgContainer { 
+        width: 200px;
+        height: 200px;
+    }
+}
 
 #modal {
     display: none;
@@ -290,6 +286,10 @@ p {
     max-width: 800px;
     font-size: 20px;
     padding: 10px;
+}
+
+#Kontakt  p, h3 { 
+    color: #D9D6D0;
 }
 
 #Kontakt {
