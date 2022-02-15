@@ -3,7 +3,7 @@
 }
 
 body, html {
-	background-color: #D9D6D0;
+	background-color: #FFE9DC;
 	font-size: 100%;
 	margin: 0px;
     height: 100%;
@@ -22,6 +22,7 @@ h3 {
 
 p {
     font-size: 20px;
+    margin: 0;
 }
 
 .navbar {
@@ -36,7 +37,7 @@ p {
 
 .navbar a {
     display: inline-block;
-	color: #D9D6D0;
+	color: #FFE9DC;
 	text-align: center;
     text-decoration: none;
 	font-size: 22px; 
@@ -50,7 +51,7 @@ p {
     display: block;
     width: 0;
     height: 2px;
-    background: white;
+    background: #FFE9DC;
     transition: width 0.2s;
 }
 
@@ -63,7 +64,7 @@ p {
     padding: 0 20px 0 20px;
     background: #00358080;   
     outline: 1px solid;
-    outline-color: white;
+    outline-color: #FFE9DC;
     outline-offset: 0px;
     transition: all 0.6s cubic-bezier(0.19, 1, 0.22, 1);
 }
@@ -89,14 +90,14 @@ p {
     bottom: 30%;
     left: 50%;
     transform: translate(-50%);
-    color: indigo;
+    color: #401D2A;
     text-align: center;
 }
 
 .main {
     margin: auto;
     max-width: 1440px;
-    width: 60%;
+    width: 70%;
 }
 
 @media screen and (max-width: 1200px) {
@@ -115,7 +116,7 @@ p {
 .bookmark {
     height: 41px;
     width: 20px;
-    background-color: #555;
+    background-color: #A61B40;
 }
 
 .twocolrow {
@@ -143,7 +144,7 @@ p {
     padding: 10px;
     max-width: fit-content;
     position: relative;
-    background-color: #D9D6D0;
+    background-color: #FFE9DC;
 }
 
 .ofertaImgTitle {
@@ -151,8 +152,8 @@ p {
     left: 10px;
     top: 10px;
     padding: 6px;
-    background-color: #260801;
-    color: #D9D6D0;
+    background-color: #0B0D00;
+    color: #FFE9DC;
 }
 
 .expandedImage { 
@@ -173,13 +174,14 @@ p {
 .galeria {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: space-between;
+    row-gap: 30px;
 }
 
 .galleryImgContainer {
-    height: 300px;
-    width: 300px;
-    margin: 5px;
+    height: 200px;
+    width: 200px;
+
     border-radius: 25px;
 }
 
@@ -241,7 +243,7 @@ p {
     position: absolute;
     top: 0;
     right: -53px;
-    color: #D9D6D0;
+    color: #FFE9DC;
     float: right;
     font-size: 40px;
     font-weight: bold;
@@ -264,7 +266,7 @@ p {
     transform: translateY(-50%);
     font-size: 30px;
     font-weight: bold;
-    color: #D9D6D0;
+    color: #FFE9DC;
     padding: 20px;
     border-radius: 10px;
 }
@@ -279,7 +281,7 @@ p {
 
 #caption {
     text-align: center;
-    color: #D9D6D0;
+    color: #FFE9DC;
     margin: auto;
     display: block;
     width: 80%;
@@ -289,24 +291,17 @@ p {
 }
 
 #Kontakt  p, h3 { 
-    color: #D9D6D0;
+    color: #FFE9DC;
 }
 
 #Kontakt {
-    background-color: #260801;
-}
-
-.mapContainer {
-    background-color: #260801;
-    width: 100%; 
-    height: 610px; 
-    padding: 0 0 13px 0;
+    background-color: #401D2A;
 }
 
 footer {
-    background-color: #734E38;
+    background-color: #0B0D00;
     padding: 10px 0 10px 0;
     text-align: center;
     font-size: 16px;
-    color: #D9D6D0;
+    color: #FFE9DC;
 }
