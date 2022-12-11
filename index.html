@@ -15,19 +15,23 @@
 
 <body> 
     <nav class="navbar"> <!--NavBar-->
-		<a class="le" href="#Home">Pod kasztanem</a>
-		<a class="le" href="#Oferta">Oferta</a>	
-		<a class="le" href="#Galeria">Galeria</a>			
-		<a class="le" href="#Kontakt">Kontakt</a>	
-		<a class="re" href="http://www.booking.com/Share-RWKscr">Zamów</a>
+		<div class="main">
+			<a href="#Home">Pod kasztanem</a>
+			<a href="http://www.booking.com/Share-RWKscr">Zamów</a>
+			<a href="#Kontakt">Kontakt</a>
+			<a href="#Galeria">Galeria</a>	
+			<a href="#Oferta">Oferta</a>	
+		</div>
 		<!-- <i id="icon" class="material-icons" onclick="dropMenu()">&#xe5d2;</i> -->
 	</nav>
 
 	<div id="Home" class="headerImg"> <!--MainImg-->
 		<div class="textbox">
-			<h1>Gospodarstwo agrotutystyczne Pod Kasztanem</h1> 
+			<h1>Gospodarstwo agrotutystyczne</h1> 
+			<h1>Pod Kasztanem</h1>
 			<p>Niezapomniany urlop w przyjemnej wiejskiej atmosferze</p>
-		</div>
+			<a href="http://www.booking.com/Share-RWKscr">Zamów pobyt już teraz</a>
+		</div>	
 	</div>
 
 	<br><br><br><br>
@@ -83,7 +87,7 @@
 					<img class="ofertaImgs" src="images/P1030892.jpg" onclick="openImg(this)">
 					<img class="ofertaImgs" src="images/P1030893.jpg" onclick="openImg(this)">
 				</div>
-				<div style="border-top: solid 1px black; ">
+				<div style="border-top: solid 1px #0b0d0075; ">
 					<ul>
 						<li>Pzeznaczony dla 4 osób</li>
 						<li>Z łazienką i aneksem kuchennym</li>
@@ -103,8 +107,8 @@
 				</div>
 				<div style="border-top: solid 1px #0b0d0075; ">
 					<ul>
-						<li>Pzeznaczony dla 4 osób</li>
-						<li>Z łazienką i aneksem kuchennym</li>
+						<li>Pzeznaczony dla 2 osób</li>
+						<li>Pokój z łazienką</li>
 					</ul>
 				</div>
 			</div>
@@ -119,10 +123,10 @@
 					<img class="ofertaImgs" src="images/P10201381.jpg" onclick="openImg(this)">
 					<img class="ofertaImgs" src="images/P1030394.jpg" onclick="openImg(this)">
 				</div>
-				<div style="border-top: solid 1px black; ">
+				<div style="border-top: solid 1px #0b0d0075; ">
 					<ul>
 						<li>Pzeznaczony dla 4 osób</li>
-						<li>Z łazienką i aneksem kuchennym</li>
+						<li>Pokój bez łazienki</li>
 					</ul>
 				</div>
 			</div>
@@ -137,10 +141,10 @@
 					<img class="ofertaImgs" src="images/P10201471.jpg" onclick="openImg(this)">
 					<img class="ofertaImgs" src="images/P1030394.jpg" onclick="openImg(this)">
 				</div>
-				<div style="border-top: solid 1px black; ">
+				<div style="border-top: solid 1px #0b0d0075; ">
 					<ul>
 						<li>Pzeznaczony dla 4 osób</li>
-						<li>Z łazienką i aneksem kuchennym</li>
+						<li>Pokój bez łazienki</li>
 					</ul>
 				</div>
 			</div>
@@ -155,10 +159,10 @@
 					<img class="ofertaImgs" src="images/P10303861.jpg" onclick="openImg(this)">
 					<img class="ofertaImgs" src="images/P1030394.jpg" onclick="openImg(this)">
 				</div>
-				<div style="border-top: solid 1px black; ">
+				<div style="border-top: solid 1px #0b0d0075; ">
 					<ul>
-						<li>Pzeznaczony dla 4 osób</li>
-						<li>Z łazienką i aneksem kuchennym</li>
+						<li>Pzeznaczony dla 2 osób</li>
+						<li>Pokój bez łazienki</li>
 					</ul>
 				</div>
 			</div>
@@ -320,7 +324,7 @@ window.onscroll = function() {
 	var currentPageYvalue = window.pageYOffset;
 	if (currentPageYvalue > 0) {
 		navbarRef.style.backgroundColor = "#0B0D00B3";
-		navbarRef.style.padding = "10px 20% 10px 20%";
+		navbarRef.style.padding = "10px 0 10px 0";
 	} else {
 		navbarRef.style.backgroundColor = "";
 		navbarRef.style.padding = "";

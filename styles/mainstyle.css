@@ -18,6 +18,10 @@ section::after {
     clear: both;
 }
 
+h1 {
+    font-style: oblique;
+}
+
 h3 {
     margin: 0;
 }
@@ -30,15 +34,15 @@ p {
 .navbar {
     display: block;
     position: fixed;
-    z-index: 1;
+    z-index: 2;
     width: 100%;
     margin: 0;
-    padding: 20px 20% 20px 20%;
+    padding: 20px 0 20px 0;
     transition: 0.2s linear;
 }
 
 .navbar a {
-    display: inline-block;
+    display: inline;
 	color: #FFE9DC;
 	text-align: center;
     text-decoration: none;
@@ -46,9 +50,20 @@ p {
     cursor: pointer;
 }
 
-.navbar a.le { margin: 0 30px 0 0; }
+.navbar a:first-child {
+    float: inline-start;
+    margin: 0;
+    font-size: 26px;
+    font-weight: 500;
+    font-style: oblique;
+}
 
-.navbar a.le:after {
+.navbar a:not(first-child){
+    margin: 0 0 0 30px;
+    float: inline-end;
+}
+
+.navbar a:not(:nth-child(2))::after {
     content: '';
     display: block;
     width: 0;
@@ -57,12 +72,11 @@ p {
     transition: width 0.2s;
 }
 
-.navbar a.le:hover::after {
+.navbar a:not(:nth-child(2)):hover::after {
     width: 100%;
 }
 
-.navbar a.re {
-    float: right;
+.navbar a:nth-child(2) {
     padding: 0 20px 0 20px;
     background: #00358080;   
     outline: 1px solid;
@@ -71,7 +85,7 @@ p {
     transition: all 0.6s cubic-bezier(0.19, 1, 0.22, 1);
 }
 
-.navbar a.re:hover {
+.navbar a:nth-child(2):hover {
     background: #006ab7;
     border: 1 solid;
     outline-color: rgba(255, 255, 255, 0);
@@ -79,7 +93,7 @@ p {
 }
 
 .headerImg {
-    background-image: url("../images/P10303861.jpg");
+    background-image: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.664)), url("../images/P10303861.jpg");
     height: 80%;
     background-position: center;
     background-repeat: no-repeat;
@@ -92,8 +106,24 @@ p {
     bottom: 30%;
     left: 50%;
     transform: translate(-50%);
-    color: #401D2A;
+    color: #FFE9DC;
     text-align: center;
+}
+
+.textbox > a {
+	color: #FFE9DC;
+    text-decoration: none;
+    margin: 20px;
+    padding: 20px;
+    background: #00358080;   
+    outline: 1px solid;
+    outline-color: #FFE9DC;
+    outline-offset: 0px;
+    cursor: pointer;
+}
+
+.textbox > p {
+    margin-bottom: 40px;
 }
 
 .main {
@@ -195,7 +225,7 @@ p {
 .galleryImgContainer {
     height: 200px;
     width: 200px;
-
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.2);
     border-radius: 25px;
 }
 
@@ -222,7 +252,7 @@ p {
 #modal {
     display: none;
     position: fixed;
-    z-index: 1;
+    z-index: 8;
     left: 0;
     top: 0;
     width: 100%;
