@@ -6,23 +6,23 @@
 	<meta charset="utf-8"/>
 	<title>Pod Kasztanem - home</title>
 	<link rel="stylesheet" type="text/css" href="styles/mainstyle.css">
-	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Dosis:wght@300;400;600&display=swap" rel="stylesheet"> 
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />	
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
 <body> 
     <nav class="navbar"> <!--NavBar-->
-		<div class="main">
+		<div class="main"> <!--WebNavbar-->
 			<a href="#Home">Pod kasztanem</a>
-			<a href="http://www.booking.com/Share-RWKscr">Zamów</a>
-			<a href="#Kontakt">Kontakt</a>
-			<a href="#Galeria">Galeria</a>	
-			<a href="#Oferta">Oferta</a>	
+			<a class="mobile"  href="javascript:void(0);" onclick="expandMenu()"><i class="material-symbols-outlined">menu</i></a>
+			<div class="navexp">
+				<div><a href="#Oferta">Oferta</a></div>
+				<div><a href="#Galeria">Galeria</a></div>
+				<div><a href="#Kontakt">Kontakt</a></div>
+				<div><a href="http://www.booking.com/Share-RWKscr">Zamów</a></div>
+			</div>
 		</div>
-		<!-- <i id="icon" class="material-icons" onclick="dropMenu()">&#xe5d2;</i> -->
 	</nav>
 
 	<div id="Home" class="headerImg"> <!--MainImg-->
@@ -34,203 +34,184 @@
 		</div>	
 	</div>
 
-	<br><br><br><br>
-
-	<div class="main">
-		<div class="twocolrow">
-			<div class="twocolcol">
-				<div style="display: inline-block; margin: 20px 0 20px 0">
-					<div style="float: left;" class="bookmark"></div> 
-					<h1 style="color: #0B0D00; float: left; margin: 0 0 0 5px;">O nas</h3>
-				</div>
-				<br>
-				<p>Jesteśmy czynnie działającym ekologicznym gospodarstwem rolnym zajmującym się hodowlą bydła
+		
+	<div class="contentbox" id="O nas">
+		<div class="main">
+			<div class="bookmarkbox">
+				<div class="bookmark"></div> 
+				<h2>Kontakt i Dojazd</h2>
+			</div>
+			<p>Jesteśmy czynnie działającym ekologicznym gospodarstwem rolnym zajmującym się hodowlą bydła
 				mięsnego, a także oferującym miejsca noclegowe, a także inne atrakcje agroturystyczne. 
 				Znajdujemy się w Strachocinie, wsi przyległej do Stronia Śląskiego, jest to bardzo ciche i spokojne miejsce,
 				ale nie jest zbytnio oddalone od głównych atrakcji turystycznych w okolicy. </p>
 				<br>
 				<p>Ze względu na to, że po podwórzu chodzą wolno kury, koty i gęsi, a także z tego powodu, że sami posiadamy
-				dość nieprzyjacielskie psy nie przyjmujemy gości z psami. </p>	
-				<br>
+				dość nieprzyjacielskie psy nie przyjmujemy gości z psami. 
+			</p>	
+		</div>
+	</div>
+
+	
+	<div class="contentbox" id="Oferta">
+		<div class="main">
+			<div class="bookmarkbox">
+				<div class="bookmark"></div> 
+				<h2>Oferta</h2>
 			</div>
-			<div class="twocolcol" style="flex: 20px;"></div>
-			<div class="twocolcol">
-				<img style="width: 100%; height: 100%; object-fit: cover;" src="images/pokoj.jpg">
+			<p>Oferujemy łącznie 15 miejsc noclegowych w pokojach dwu, trój, lub 4 osobowych, 
+				niektóre posiadają łazienkę w pokoju, a dla innych łazienka znajduję się osobno na korytarzu.
+				Oprócz pokojów noclegowych dostępna jest kuchnia z pełnym wyposażeniem, gdzie bez problemu można 
+				przyżądzać jedzenie, na ogrodzie znajduje się wiata z grillem, 
+				a niedaleko także klimatyczne miejsce na ognisko, dodatkowo zapewniamy także darmowy internet po wi-fi. 
+			</p>
+			<div class="ofertaContainer">
+				<div class="ofertaBox" >	
+					<div style="position: relative;">
+						<img class="expandedImage" src="images/P1030889.jpg">
+						<div class="ofertaImgTitle">Pokój żółty</div>
+					</div>
+					<div class="ofertaMiniImgs">
+						<img class="ofertaImgs" src="images/P1030889.jpg" onclick="openImg(this)">
+						<img class="ofertaImgs" src="images/P1030892.jpg" onclick="openImg(this)">
+						<img class="ofertaImgs" src="images/P1030893.jpg" onclick="openImg(this)">
+					</div>
+					<div style="border-top: solid 1px #0b0d0075; ">
+						<ul>
+							<li>Pzeznaczony dla 4 osób</li>
+							<li>Z łazienką i aneksem kuchennym</li>
+						</ul>
+					</div>
+				</div>
+	
+				<div class="ofertaBox">
+					<div style="position: relative;">
+						<div class="ofertaImgTitle">Pokój czerwony</div>
+						<img class="expandedImage" src="images/P10201351.jpg">
+					</div>
+					<div class="ofertaMiniImgs">
+						<img class="ofertaImgs" src="images/dom.jpg" onclick="openImg(this)">
+						<img class="ofertaImgs" src="images/P10303861.jpg" onclick="openImg(this)">
+						<img class="ofertaImgs" src="images/P1030394.jpg" onclick="openImg(this)">
+					</div>
+					<div style="border-top: solid 1px #0b0d0075; ">
+						<ul>
+							<li>Pzeznaczony dla 2 osób</li>
+							<li>Pokój z łazienką</li>
+						</ul>
+					</div>
+				</div>
+	
+				<div class="ofertaBox">
+					<div style="position: relative;">
+						<div class="ofertaImgTitle">Pokój zielony</div>
+						<img class="expandedImage" src="images/P10201371.jpg">
+					</div>
+					<div class="ofertaMiniImgs">
+						<img class="ofertaImgs" src="images/P10201371.jpg" onclick="openImg(this)">
+						<img class="ofertaImgs" src="images/P10201381.jpg" onclick="openImg(this)">
+						<img class="ofertaImgs" src="images/P1030394.jpg" onclick="openImg(this)">
+					</div>
+					<div style="border-top: solid 1px #0b0d0075; ">
+						<ul>
+							<li>Pzeznaczony dla 4 osób</li>
+							<li>Pokój bez łazienki</li>
+						</ul>
+					</div>
+				</div>
+	
+				<div class="ofertaBox">
+					<div style="position: relative;">
+						<div class="ofertaImgTitle">Pokój niebieski</div>
+						<img class="expandedImage" src="images/P10201461.jpg">
+					</div>
+					<div class="ofertaMiniImgs">
+						<img class="ofertaImgs" src="images/P10201461.jpg" onclick="openImg(this)">
+						<img class="ofertaImgs" src="images/P10201471.jpg" onclick="openImg(this)">
+						<img class="ofertaImgs" src="images/P1030394.jpg" onclick="openImg(this)">
+					</div>
+					<div style="border-top: solid 1px #0b0d0075; ">
+						<ul>
+							<li>Pzeznaczony dla 4 osób</li>
+							<li>Pokój bez łazienki</li>
+						</ul>
+					</div>
+				</div>
+	
+				<div class="ofertaBox">
+					<div style="position: relative;">
+						<div class="ofertaImgTitle">Pokój pomarańczowy</div>
+						<img class="expandedImage" src="images/P10201351.jpg">
+					</div>
+					<div class="ofertaMiniImgs">
+						<img class="ofertaImgs" src="images/dom.jpg" onclick="openImg(this)">
+						<img class="ofertaImgs" src="images/P10303861.jpg" onclick="openImg(this)">
+						<img class="ofertaImgs" src="images/P1030394.jpg" onclick="openImg(this)">
+					</div>
+					<div style="border-top: solid 1px #0b0d0075; ">
+						<ul>
+							<li>Pzeznaczony dla 2 osób</li>
+							<li>Pokój bez łazienki</li>
+						</ul>
+					</div>
+				</div>
 			</div>
 		</div>
 	</div>
 
-	<br><br><br>
-
-	<div id="Oferta" class="main"> </div>
-	<div class="main">
-		<div style="display: inline-block; margin: 20px 0 20px 0;">
-			<div style="float: left;" class="bookmark"></div> 
-			<h1 style="color: #0B0D00; float: left; margin: 0 0 0 5px;">Oferta</h3>
-		</div>
-		<br>
-		<p>Oferujemy łącznie 15 miejsc noclegowych w pokojach dwu, trój, lub 4 osobowych, 
-		niektóre posiadają łazienkę w pokoju, a dla innych łazienka znajduję się osobno na korytarzu.
-		Oprócz pokojów noclegowych dostępna jest kuchnia z pełnym wyposażeniem, gdzie bez problemu można 
-		przyżądzać jedzenie, na ogrodzie znajduje się wiata z grillem, 
-		a niedaleko także klimatyczne miejsce na ognisko, dodatkowo zapewniamy także darmowy internet po wi-fi. </p>
-		<br>
-
-		<div class="ofertaContainer">
-			<div class="ofertaBox" >	
-				<div style="position: relative;">
-					<img class="expandedImage" src="images/P1030889.jpg">
-					<div class="ofertaImgTitle">Pokój żółty</div>
-				</div>
-				<div class="ofertaMiniImgs">
-					<img class="ofertaImgs" src="images/P1030889.jpg" onclick="openImg(this)">
-					<img class="ofertaImgs" src="images/P1030892.jpg" onclick="openImg(this)">
-					<img class="ofertaImgs" src="images/P1030893.jpg" onclick="openImg(this)">
-				</div>
-				<div style="border-top: solid 1px #0b0d0075; ">
-					<ul>
-						<li>Pzeznaczony dla 4 osób</li>
-						<li>Z łazienką i aneksem kuchennym</li>
-					</ul>
-				</div>
+	
+	<div class="contentbox" id="Galeria">
+		<div class="main">
+			<div class="bookmarkbox">
+				<div class="bookmark"></div> 
+				<h2>Galeria</h2>
 			</div>
-
-			<div class="ofertaBox">
-				<div style="position: relative;">
-					<div class="ofertaImgTitle">Pokój czerwony</div>
-					<img class="expandedImage" src="images/P10201351.jpg">
-				</div>
-				<div class="ofertaMiniImgs">
-					<img class="ofertaImgs" src="images/dom.jpg" onclick="openImg(this)">
-					<img class="ofertaImgs" src="images/P10303861.jpg" onclick="openImg(this)">
-					<img class="ofertaImgs" src="images/P1030394.jpg" onclick="openImg(this)">
-				</div>
-				<div style="border-top: solid 1px #0b0d0075; ">
-					<ul>
-						<li>Pzeznaczony dla 2 osób</li>
-						<li>Pokój z łazienką</li>
-					</ul>
-				</div>
+			<div class="galeria"> <!--Galeria-->
+				<div class="galleryImgContainer"><img class="galleryImg" src="images/P10209271.jpg" onclick="openModal();currentSlide(this);isLast()" alt="Pokój czerwony"></div>
+				<div class="galleryImgContainer"><img class="galleryImg" src="images/P10303921.jpg" onclick="openModal();currentSlide(this);isLast()" alt="Pokój zielony"></div>
+				<div class="galleryImgContainer"><img class="galleryImg" src="images/P1030394.jpg" onclick="openModal();currentSlide(this);isLast()" alt="Pokój niebieski"></div>
+				<div class="galleryImgContainer"><img class="galleryImg" src="images/133742656.jpg" onclick="openModal();currentSlide(this);isLast()" alt="Dom"></div>
+				<div class="galleryImgContainer"><img class="galleryImg" src="images/132373252.jpg" onclick="openModal();currentSlide(this);isLast()" alt="Ogród"></div>
+				<div class="galleryImgContainer"><img class="galleryImg" src="images/P1030864.jpg" onclick="openModal();currentSlide(this);isLast()" alt="Ogród"></div>
+				<div class="galleryImgContainer"><img class="galleryImg" src="images/P1030875.jpg" onclick="openModal();currentSlide(this);isLast()" alt="Ogród"></div>
 			</div>
-
-			<div class="ofertaBox">
-				<div style="position: relative;">
-					<div class="ofertaImgTitle">Pokój zielony</div>
-					<img class="expandedImage" src="images/P10201371.jpg">
-				</div>
-				<div class="ofertaMiniImgs">
-					<img class="ofertaImgs" src="images/P10201371.jpg" onclick="openImg(this)">
-					<img class="ofertaImgs" src="images/P10201381.jpg" onclick="openImg(this)">
-					<img class="ofertaImgs" src="images/P1030394.jpg" onclick="openImg(this)">
-				</div>
-				<div style="border-top: solid 1px #0b0d0075; ">
-					<ul>
-						<li>Pzeznaczony dla 4 osób</li>
-						<li>Pokój bez łazienki</li>
-					</ul>
-				</div>
-			</div>
-
-			<div class="ofertaBox">
-				<div style="position: relative;">
-					<div class="ofertaImgTitle">Pokój niebieski</div>
-					<img class="expandedImage" src="images/P10201461.jpg">
-				</div>
-				<div class="ofertaMiniImgs">
-					<img class="ofertaImgs" src="images/P10201461.jpg" onclick="openImg(this)">
-					<img class="ofertaImgs" src="images/P10201471.jpg" onclick="openImg(this)">
-					<img class="ofertaImgs" src="images/P1030394.jpg" onclick="openImg(this)">
-				</div>
-				<div style="border-top: solid 1px #0b0d0075; ">
-					<ul>
-						<li>Pzeznaczony dla 4 osób</li>
-						<li>Pokój bez łazienki</li>
-					</ul>
-				</div>
-			</div>
-
-			<div class="ofertaBox">
-				<div style="position: relative;">
-					<div class="ofertaImgTitle">Pokój pomarańczowy</div>
-					<img class="expandedImage" src="images/P10201351.jpg">
-				</div>
-				<div class="ofertaMiniImgs">
-					<img class="ofertaImgs" src="images/dom.jpg" onclick="openImg(this)">
-					<img class="ofertaImgs" src="images/P10303861.jpg" onclick="openImg(this)">
-					<img class="ofertaImgs" src="images/P1030394.jpg" onclick="openImg(this)">
-				</div>
-				<div style="border-top: solid 1px #0b0d0075; ">
-					<ul>
-						<li>Pzeznaczony dla 2 osób</li>
-						<li>Pokój bez łazienki</li>
-					</ul>
-				</div>
-			</div>
-			
-		</div>
-	</div>
-
-	<br><br><br>
-
-	<div id="Galeria" class="main"></div> 
-	<div class="main">
-		<div style="display: inline-block; margin: 20px 0 20px 0">
-			<div style="float: left;" class="bookmark"></div> 
-			<h1 style="color: #0B0D00; float: left; margin: 0 0 0 5px;">Galleria</h3>
-		</div>
-	</div>
-	<div class="main">
-		<div class="galeria"> <!--Galeria-->
-			<div class="galleryImgContainer"><img class="galleryImg" src="images/P10209271.jpg" onclick="openModal();currentSlide(this);isLast()" alt="Pokój czerwony"></div>
-			<div class="galleryImgContainer"><img class="galleryImg" src="images/P10303921.jpg" onclick="openModal();currentSlide(this);isLast()" alt="Pokój zielony"></div>
-			<div class="galleryImgContainer"><img class="galleryImg" src="images/P1030394.jpg" onclick="openModal();currentSlide(this);isLast()" alt="Pokój niebieski"></div>
-			<div class="galleryImgContainer"><img class="galleryImg" src="images/133742656.jpg" onclick="openModal();currentSlide(this);isLast()" alt="Dom"></div>
-			<div class="galleryImgContainer"><img class="galleryImg" src="images/132373252.jpg" onclick="openModal();currentSlide(this);isLast()" alt="Ogród"></div>
-			<div class="galleryImgContainer"><img class="galleryImg" src="images/P1030864.jpg" onclick="openModal();currentSlide(this);isLast()" alt="Ogród"></div>
-			<div class="galleryImgContainer"><img class="galleryImg" src="images/P1030875.jpg" onclick="openModal();currentSlide(this);isLast()" alt="Ogród"></div>
 		</div>
 	</div>
 
 	<div id="modal">
+		<span class="close" onclick="closeModal()">&times;</span>
 		<div class="modalBox">
-			<span class="close" onclick="closeModal()">&times;</span>
-			<img id="modalImg" class="animate">
+			
+			<div class="modalImgBox">
+				<img id="modalImg" class="animate">
+			</div>
 			<a id="prev" onclick="plusSlides(-1);resetTransition();isLast()">&#10094;</a>
     		<a id="next" onclick="plusSlides(1);resetTransition();isLast()">&#10095;</a>
 			<div id="caption"></div>
 		</div>
 	</div>
-	
-	<br> <br>
-	<div id="Kontakt">
-		<br>
+
+
+	<div class="contentbox" style="background-color: #401D2A; color: #FFE9DC; padding-bottom: 0;">
 		<div class="main">
-			<div class="twocolrow">
-				<div class="twocolcol">
-					<div style="display: inline-block; margin: 20px 0 20px 0">
-						<div style="float: left;" class="bookmark"></div> 
-						<h1 style="color: #FFE9DC; float: left; margin: 0 0 0 5px;">Kontakt i Dojazd</h3>
-					</div>
-					<p>	Telefon: 888 607 808, 748 141 283</p><br>
-					<p> Email: podkasztanem@gmail.com</p><br>
-					<p>Adres: Strachocin 23, Strachocin, 57-550</p><br>
-					<p>Numer konta: </p><br>
-					<br><br>
-					<p>	W celu dotarcia do nas najlepiej dojechać do samego Stronia Śląskiego i tam skręcić w ulicę górną,
-					która zaprowadzi niemal do samego gospodarstwa.</p>
-				</div>
-				<div class="twocolcol">
-
-				</div>
-			</div>	
-		</div>	
-		<br>
-	</div>
-
-	<div style="height: 600px;"> <!-- mapa -->
-		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d20390.520484150416!2d16.8485745!3d50.295379999999994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xe1c6b215a510133b!2sGospodarstwo%20agroturystyczne%20Pod%20Kasztanem!5e0!3m2!1spl!2spl!4v1599503892389!5m2!1spl!2spl" 
-		width="100%" height="600px" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
-		</iframe>
+			<div class="bookmarkbox">
+				<div class="bookmark"></div> 
+				<h2>Kontakt i Dojazd</h2>
+			</div>
+			<p>	Telefon: 888 607 808, 748 141 283</p><br>
+			<p> Email: podkasztanem@gmail.com</p><br>
+			<p>Adres: Strachocin 23, Strachocin, 57-550</p><br>
+			<p>Numer konta: </p><br>
+			<br><br>
+			<p>	W celu dotarcia do nas najlepiej dojechać do samego Stronia Śląskiego i tam skręcić w ulicę górną,
+			która zaprowadzi niemal do samego gospodarstwa.</p>
+			<br>
+		</div>
+		<div style="height: 600px;"> <!-- mapa -->
+			<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d20390.520484150416!2d16.8485745!3d50.295379999999994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xe1c6b215a510133b!2sGospodarstwo%20agroturystyczne%20Pod%20Kasztanem!5e0!3m2!1spl!2spl!4v1599503892389!5m2!1spl!2spl" 
+			width="100%" height="600px" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+			</iframe>
+		</div>
 	</div>
 
 	<footer>
@@ -330,4 +311,18 @@ window.onscroll = function() {
 		navbarRef.style.padding = "";
 	}
 }
+</script>
+
+<script>
+	var x = document.querySelector(".navexp");
+	var y = document.querySelector(".material-symbols-outlined");
+	function expandMenu() {
+		if(x.className == "navexp") {
+			x.className += " expanded";
+			y.textContent = "close"
+		} else {
+			x.className = "navexp";
+			y.textContent = "menu"
+		}
+	}
 </script>
