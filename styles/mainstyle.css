@@ -130,20 +130,35 @@ p {
     text-align: center;
 }
 
-.textbox > a {
-	color: #FFE9DC;
-    text-decoration: none;
-    margin: 20px;
-    padding: 20px;
-    background: #00358080;   
-    outline: 1px solid;
-    outline-color: #FFE9DC;
-    outline-offset: 0px;
-    cursor: pointer;
-}
-
 .textbox > p {
     margin-bottom: 40px;
+}
+
+#bookbutton{
+    height: 100%;
+	display: flex;
+	align-items: center;
+    justify-content: center;
+}
+
+#animatedbookbutton{
+    font-style: oblique;
+	letter-spacing: 0.2em;
+	font-size: 30px;
+	text-align: center;
+	color: #FFE9DC;
+    cursor: pointer;
+    max-width: 600px; 
+    width: 100%; 
+    outline: 3px solid;
+    outline-color: #FFE9DC77;
+    outline-offset: 20px;
+    transition: all 600ms cubic-bezier(0.2, 0, 0, 0.8);
+}
+#animatedbookbutton:hover{
+    color: #A61B40AA;
+    outline-color: #A61B4000;
+    outline-offset: 200px;
 }
 
 .main {
