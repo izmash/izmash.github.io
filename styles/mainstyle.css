@@ -45,7 +45,7 @@ p {
 .navbar a {
     display: block;
     line-height: 26px;
-    float: left;
+    float: inline-start;
 	color: #FFE9DC;
 	text-align: center;
     text-decoration: none;
@@ -53,12 +53,13 @@ p {
     font-size: 22px;
 }
 
-.navbar .navexp > div > a {
+.navbar .navexp  > a {
     padding-left: 40px;
     float: right;
 }
 
 .navbar .mobile {
+    float: inline-end;
     display: none;
 }
 
@@ -88,7 +89,6 @@ p {
     }
     .navbar a.mobile {
         display: block;
-        float: right;
     }
     .navbar {
         background-color: #0B0D00B3;
@@ -131,7 +131,7 @@ p {
 }
 
 .textbox > p {
-    margin-bottom: 40px;
+    margin-bottom: 60px;
 }
 
 #bookbutton{
@@ -143,8 +143,8 @@ p {
 
 #animatedbookbutton{
     font-style: oblique;
-	letter-spacing: 0.2em;
 	font-size: 30px;
+    padding: 5px;
 	text-align: center;
 	color: #FFE9DC;
     cursor: pointer;
