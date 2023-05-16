@@ -53,9 +53,16 @@ p {
     font-size: 22px;
 }
 
-.navbar .navexp  > a {
-    padding-left: 40px;
+.navbar .navexp {
     float: right;
+}
+
+.navbar .navexp  div{
+    display: inline-block;
+}
+
+.navbar .navexp  a {
+    padding-left: 40px;
 }
 
 .navbar .mobile {
